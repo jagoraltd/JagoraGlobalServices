@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | JagoraGlobalServices Ltd</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      height: 250px;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 25, 47, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    .gallery-overlay span {
+      color: var(--white);
+      font-weight: 600;
+      font-family: 'Outfit', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="header" class="scrolled" style="background-color: var(--primary);">
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">
+          <img src="assets/logo.png" alt="Jagora Logo" style="filter: brightness(0) invert(1);">
+          <span class="logo-text" style="color: var(--white);">JagoraGlobal</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="nav-link" style="color: var(--white);">Home</a></li>
+          <li><a href="about.html" class="nav-link" style="color: var(--white);">About Us</a></li>
+          <li><a href="services.html" class="nav-link" style="color: var(--white);">Services</a></li>
+          <li><a href="gallery.html" class="nav-link" style="color: var(--white);">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link" style="color: var(--white);">Contact Us</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle" style="color: var(--white);">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header" style="background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1493397212122-2b85dda8106b?auto=format&fit=crop&q=80') center/cover; padding: 8rem 0 4rem; color: var(--white); text-align: center;">
+    <div class="container">
+      <h1 style="font-size: 3rem;">Gallery</h1>
+      <p style="color: var(--secondary); font-weight: 500;">Moments of Professional Excellence</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <div class="container">
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80" alt="Office">
+          <div class="gallery-overlay"><span>Office Environment</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80" alt="Hospital">
+          <div class="gallery-overlay"><span>Hospital Visits</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1436491865332-7a61a109c0f3?auto=format&fit=crop&q=80" alt="Travel">
+          <div class="gallery-overlay"><span>Travel Groups</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&q=80" alt="Hajj">
+          <div class="gallery-overlay"><span>Hajj & Umrah</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80" alt="Meeting">
+          <div class="gallery-overlay"><span>Partnership Meetings</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1522071823991-b9671f9d7f1f?auto=format&fit=crop&q=80" alt="Team">
+          <div class="gallery-overlay"><span>Professional Team</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background-color: var(--primary); color: var(--white); padding: 5rem 0 2rem; margin-top: 5rem;">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="margin-bottom: 1.5rem;">
+            <img src="assets/logo.png" alt="Jagora Logo" style="filter: brightness(0) invert(1);">
+            <span class="logo-text" style="color: var(--white);">JagoraGlobal</span>
+          </div>
+          <p style="color: var(--gray);">Your Trusted Partner for Travel, Healthcare & Global Opportunities.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links" style="color: var(--gray);">
+            <li><i class="fas fa-envelope" style="color: var(--secondary); margin-right: 10px;"></i> info@jagoraglobalservices.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 JagoraGlobalServices Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
