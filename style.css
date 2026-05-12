@@ -483,7 +483,25 @@ footer {
   transform: scale(1.1);
 }
 
-/* Mobile Menu */
+/* Professional Mobile Menu */
+.mobile-socials {
+  display: none;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.mobile-socials a {
+  font-size: 1.2rem;
+  color: var(--secondary);
+  transition: var(--transition);
+}
+
+.mobile-socials a:hover {
+  color: var(--white);
+  transform: translateY(-3px);
+}
 .menu-toggle {
   display: none;
   font-size: 1.5rem;
@@ -499,36 +517,79 @@ footer {
 @media (max-width: 768px) {
   header {
     padding: 1rem 0;
-    background-color: var(--primary); /* Solid on mobile for better visibility */
+    background-color: var(--primary);
   }
 
   .nav-links {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed; /* Changed to fixed for full screen */
+    top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--primary);
+    height: 100vh;
+    background-color: rgba(10, 25, 47, 0.98);
+    backdrop-filter: blur(10px);
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
-    text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    z-index: 999;
+    animation: fadeIn 0.4s ease;
   }
 
   .nav-links.active {
     display: flex;
   }
 
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    animation: slideUp 0.5s ease forwards;
+  }
+
+  .nav-links li:nth-child(1) { animation-delay: 0.1s; }
+  .nav-links li:nth-child(2) { animation-delay: 0.2s; }
+  .nav-links li:nth-child(3) { animation-delay: 0.3s; }
+  .nav-links li:nth-child(4) { animation-delay: 0.4s; }
+  .nav-links li:nth-child(5) { animation-delay: 0.5s; }
+  .nav-links li:nth-child(6) { animation-delay: 0.6s; }
+
   .nav-link {
     color: var(--white);
-    font-size: 1.1rem;
+    font-size: 1.8rem;
+    font-weight: 700;
     padding: 1rem 0;
+    display: block;
+  }
+
+  .mobile-socials {
+    display: flex;
   }
 
   .menu-toggle {
     display: block;
     color: var(--white);
+    z-index: 1000;
+    position: relative;
   }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
   .hero {
     text-align: center;

@@ -15,6 +15,18 @@ const navLinks = document.getElementById('nav-links');
 if (menuToggle) {
   menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    
+    // Toggle between burger and close icon
+    const icon = menuToggle.querySelector('i');
+    if (navLinks.classList.contains('active')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+    } else {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+      document.body.style.overflow = 'auto';
+    }
   });
 }
 
@@ -23,6 +35,10 @@ const links = document.querySelectorAll('.nav-link');
 links.forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('active');
+    document.body.style.overflow = 'auto';
+    const icon = menuToggle.querySelector('i');
+    icon.classList.remove('fa-times');
+    icon.classList.add('fa-bars');
   });
 });
 
