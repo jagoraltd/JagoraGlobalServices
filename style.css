@@ -138,7 +138,8 @@ header {
   z-index: 1000;
   transition: var(--transition);
   padding: 1.5rem 0;
-  background-color: transparent;
+  background-color: rgba(10, 25, 47, 0.4);
+  backdrop-filter: blur(10px);
 }
 
 header.scrolled {
@@ -165,8 +166,8 @@ nav {
 }
 
 .logo-text {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 1.7rem;
+  font-weight: 800;
   color: var(--white);
   letter-spacing: -0.5px;
 }
@@ -177,10 +178,11 @@ nav {
 }
 
 .nav-link {
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+  color: var(--white);
   position: relative;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
 }
 
 .nav-link::after {
@@ -206,7 +208,7 @@ nav {
 .hero {
   height: 100vh;
   min-height: 700px;
-  background: linear-gradient(135deg, rgba(10, 25, 47, 0.9) 0%, rgba(10, 25, 47, 0.4) 100%), url('/assets/hero-bg.png') center/cover no-repeat;
+  background: linear-gradient(rgba(10, 25, 47, 0.7) 0%, rgba(10, 25, 47, 0.5) 100%), url('assets/hero-bg.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   color: var(--white);
@@ -235,16 +237,17 @@ nav {
 
 .hero-badge {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  background: rgba(197, 160, 89, 0.2);
-  border: 1px solid var(--secondary);
+  padding: 0.6rem 1.2rem;
+  background: rgba(197, 160, 89, 0.15);
+  border: 1.5px solid var(--secondary);
   border-radius: 50px;
   color: var(--secondary);
-  font-weight: 600;
-  font-size: 0.85rem;
+  font-weight: 700;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 1.5rem;
+  letter-spacing: 2.5px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(5px);
 }
 
 .hero h1 {
@@ -253,19 +256,20 @@ nav {
   margin-bottom: 1.5rem;
   line-height: 1.1;
   letter-spacing: -1px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .hero h1 span {
   color: var(--secondary);
-  display: block;
 }
 
 .hero p {
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   margin-bottom: 3rem;
-  color: var(--text-main);
-  max-width: 600px;
+  color: #E2E8F0;
+  max-width: 700px;
   line-height: 1.8;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .hero-btns {
@@ -285,13 +289,15 @@ nav {
 .trust-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  font-weight: 500;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .trust-item i {
   color: var(--secondary);
+  font-size: 1.1rem;
 }
 
 @keyframes fadeInUp {
@@ -333,15 +339,16 @@ nav {
 }
 
 .btn-outline {
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
   color: var(--white);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(10, 25, 47, 0.4);
   backdrop-filter: blur(10px);
 }
 
 .btn-outline:hover {
   border-color: var(--secondary);
-  background: var(--secondary);
+  background: rgba(197, 160, 89, 0.1);
+  color: var(--secondary);
 }
 
 /* Service Cards */
