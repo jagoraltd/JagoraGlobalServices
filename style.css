@@ -573,7 +573,6 @@ footer {
     z-index: 1000;
     position: relative;
   }
-}
 
 @keyframes fadeIn {
   from { opacity: 0; }
