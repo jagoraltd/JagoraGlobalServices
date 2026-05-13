@@ -52,13 +52,25 @@ img {
 }
 
 section {
-  padding: clamp(3rem, 8vw, 6rem) 0;
+  padding: clamp(3.5rem, 10vw, 6.5rem) 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 0;
+  }
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.2rem;
+  }
 }
 
 /* Typography */
@@ -685,14 +697,66 @@ footer {
 
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-btns {
+    gap: 1rem;
+  }
+
+  .btn {
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
   }
   
   .section-title {
-    font-size: 2rem;
+    font-size: 2.1rem;
+  }
+
+  .service-card {
+    padding: 2rem 1.5rem;
   }
 
   .contact-form {
-    padding: 1.5rem;
+    padding: 2rem 1.2rem;
+  }
+
+  .cta {
+    padding: 3rem 0;
+  }
+
+  .cta > .container > div {
+    padding: 2.5rem 1.2rem !important;
+    border-radius: 15px !important;
+  }
+
+  .cta h2 {
+    font-size: 1.8rem !important;
+  }
+
+  .footer-col h4 {
+    margin-top: 1rem;
+  }
+
+  .whatsapp-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.6rem;
+  }
+
+  .logo-text {
+    font-size: 1.4rem;
+  }
+
+  .logo img {
+    height: 40px;
   }
 }
