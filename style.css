@@ -218,13 +218,13 @@ nav {
 
 /* Hero Section Redesign */
 .hero {
-  height: 100vh;
-  min-height: 700px;
+  min-height: 100vh;
+  min-height: 100svh;
   background: linear-gradient(rgba(10, 25, 47, 0.7) 0%, rgba(10, 25, 47, 0.5) 100%), url('./src/assets/hero-bg.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   color: var(--white);
-  padding-top: 80px;
+  padding-top: 100px;
   position: relative;
   overflow: hidden;
 }
@@ -255,10 +255,10 @@ nav {
   border-radius: 50px;
   color: var(--secondary);
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 2.5px;
-  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
   backdrop-filter: blur(5px);
 }
 
@@ -549,9 +549,9 @@ footer {
     background: linear-gradient(135deg, rgba(10, 25, 47, 0.98) 0%, rgba(10, 25, 47, 0.95) 100%);
     backdrop-filter: blur(20px);
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 2rem;
+    padding: 7rem 2rem 2rem;
     z-index: 999;
     animation: fadeIn 0.4s ease;
   }
@@ -560,12 +560,12 @@ footer {
   .nav-links::before {
     content: 'J';
     position: absolute;
-    font-size: 30rem;
+    font-size: 25rem;
     color: rgba(197, 160, 89, 0.03);
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
     z-index: -1;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -647,7 +647,8 @@ footer {
 
   .hero {
     text-align: center;
-    padding-top: 120px;
+    padding-top: 140px;
+    padding-bottom: 40px;
   }
 
   .hero-content {
@@ -711,7 +712,7 @@ footer {
   }
 
   .btn {
-    padding: 1rem 1.5rem;
+    padding: 1.1rem 2rem;
     font-size: 0.95rem;
   }
   
